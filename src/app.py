@@ -18,7 +18,6 @@ if st.button("Predict"):
         image = Image.open(val1).resize((128, 128))
         image = np.asarray(image)
         image = image.astype('float32') / 255.0
-        st.image(image)
         image = np.expand_dims(image, axis=0)
         pred = model.predict(image)[0][0]
         st.divider()
