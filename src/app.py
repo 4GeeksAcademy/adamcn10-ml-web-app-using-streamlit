@@ -13,7 +13,7 @@ val1 = st.file_uploader('Upload your CAT or Dog Image', type=["jpg", "jpeg", "pn
 
 if st.button("Predict"):
     if val1 is None:
-        st.warning("Por favor sube una imagen antes de predecir.")
+        st.warning("Please upload an image before predicting.")
     else:
         image = Image.open(val1).resize((128, 128))
         image = np.asarray(image)
