@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 
-model = load_model('/workspaces/adamcn10-ml-web-app-using-streamlit/models/image-classifier.keras')
+model = load_model('../models/image-classifier.keras')
 
 st.title("It's a CAT or a DOG?")
 st.markdown("""Power by: [Adam Candalija Naranjo](https://chocobar.net)""")
