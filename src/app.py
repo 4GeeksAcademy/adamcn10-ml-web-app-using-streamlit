@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 
-model = load_model("./image-classifier.keras")
+model = load_model("src/image-classifier.keras")
 
 st.title("It's a CAT or a DOG?")
 st.markdown("""Power by: [Adam Candalija Naranjo](https://github.com/AdamCN10)""")
@@ -32,4 +32,4 @@ if st.button("Predict"):
             st.write("What a beautyfil dog")
         st.divider()
         st.image(image)
-
+        st.divider()
