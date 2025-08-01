@@ -9,7 +9,7 @@ st.title("It's a CAT or a DOG?")
 st.markdown("""Power by: [Adam Candalija Naranjo](https://chocobar.net)""")
 st.divider()
 
-val1 = st.file_uploader('Sube tu imagen de gato o perro', type=["jpg", "jpeg", "png"])
+val1 = st.file_uploader('Upload your CAT or Dog Image', type=["jpg", "jpeg", "png"])
 
 if st.button("Predict"):
     if val1 is None:
@@ -23,13 +23,13 @@ if st.button("Predict"):
         pred = model.predict(image)[0][0]
         st.divider()
         if pred > 0.7:
-            st.write("Que gato más bonito")
+            st.write("What a beautyfil cat")
         elif pred > 0.5:
-            st.write("Casi seguro que eso es un gato")
+            st.write("I'm pretty sure that's a cat")
         elif pred > 0.3:
-            st.write("Çasi seguro que eso es un perro")
+            st.write("I'm pretty sure that's a dog")
         else:
-            st.write("Que perro más bonito")
+            st.write("What a beautyfil dog")
         st.divider()
         st.image(image)
 
