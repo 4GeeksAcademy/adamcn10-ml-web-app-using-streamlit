@@ -6,7 +6,7 @@ from PIL import Image
 model = load_model('/workspaces/adamcn10-ml-web-app-using-streamlit/src/image-classifier.keras')
 
 st.title("It's a CAT or a DOG?")
-st.markdown("""Power by: [Adam Candalija Naranjo](https://chocobar.net)""")
+st.markdown("""Power by: [Adam Candalija Naranjo](https://github.com/AdamCN10)""")
 st.divider()
 
 val1 = st.file_uploader('Upload your CAT or Dog Image', type=["jpg", "jpeg", "png"])
