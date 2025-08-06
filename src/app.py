@@ -24,9 +24,9 @@ if st.button("Predict"):
         if pred > 0.7:
             st.write("What a beautyfil cat")
         elif pred > 0.5:
-            st.write("I'm pretty sure that's a cat")
+            st.write("I'm pretty sure that's a cat (well, maybe not that much)")
         elif pred > 0.3:
-            st.write("I'm pretty sure that's a dog")
+            st.write("I'm pretty sure that's a dog (well, maybe not that much)")
         else:
             st.write("What a beautyfil dog")
         st.divider()
