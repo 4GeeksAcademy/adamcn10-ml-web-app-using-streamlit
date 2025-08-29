@@ -11,6 +11,10 @@ st.divider()
 
 val1 = st.file_uploader('Upload your CAT or Dog Image', type=["jpg", "jpeg", "png"])
 
+if val1 is not None:
+    st.button('Esto aparece antes de la imagen?')
+
+
 if st.button("Predict"):
     if val1 is None:
         st.warning("Please upload an image before predicting.")
