@@ -13,6 +13,23 @@ val1 = st.file_uploader('Upload your CAT or Dog Image', type=["jpg", "jpeg", "pn
 
 if val1 is not None:
     st.button('Esto aparece antes de la imagen?')
+    image = Image.open(val1).resize((128, 128))
+    image = np.asarray(image)
+    image = image.astype('float32') / 255.0
+    image = np.expand_dims(image, axis=0)
+    pred = model.predict(image)[0][0]
+    st.divider()
+    if pred > 0.7:
+        st.write("What a beautyfil cat")
+    elif pred > 0.5:
+        st.write("I'm pretty sure that's a cat (well, maybe not that much)")
+    elif pred > 0.3:
+        st.write("I'm pretty sure that's a dog (well, maybe not that much)")
+    else:
+        st.write("What a beautyfil dog")
+    st.divider()
+    st.image(image)
+    st.divider()
 
 
 if st.button("Predict"):
